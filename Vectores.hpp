@@ -12,15 +12,15 @@ using std::time;
 
 class Vectores{
 	friend Vectores &operator +(const Vectores &, const Vectores &);
+	friend Vectores &operator -(const Vectores &, const Vectores &);
 	public:
 		//Constructor
 		Vectores(const int);
-		//Constructor por defecto
-		Vectores();
 		Vectores mostrarvec();
+		void setV(const int);
 		void setDim(const int);
-		const int getD()const;
-		const int getTamano()const;
+		const int getV()const;
+		const int getDim()const;
 		//función que permita inserta el elemento en una posición.
 		
 	private:

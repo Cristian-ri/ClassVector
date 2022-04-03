@@ -1,5 +1,5 @@
 #include "Vectores.hpp"
-
+//Constructor
 Vectores::Vectores(const int D){
 	this->dim = D;
 	v= new int[dim];
@@ -8,33 +8,22 @@ Vectores::Vectores(const int D){
 	}	
 }
 
-//Constructor por defecto
-/*Vectores::Vectores(){
-	this->tamano;
-	d= new int[tamano];
-	for(int i=0; i<tamano; i++){
-		d[i] = 0;
-	}
-	srand(time(NULL));
-}*/
-
-void Vectores::setD(const int D){
+void Vectores::setDim(const int D){
 	this->dim=D;	
 }
 
-const int Vectores::getD()const{
+const int Vectores::getDim()const{
 	return this->dim;
 }
 
-const int Vectores::getTamano()const{
+const int Vectores::getV()const{
 	return this->dim;
 }
 
-void Vectores::setTamano(const int Tamano){
-	this->dim=Tamano;
+void Vectores::setV(const int Vv){
+	this->dim=Vv;
 }
 
-//sobrecargar
 Vectores Vectores::mostrarvec(){
 	cout<<"[";
 	for(int i=0; i<this->dim; i++){
@@ -44,10 +33,20 @@ Vectores Vectores::mostrarvec(){
 }
 
 Vectores &operator +(const Vectores &vector1, const Vectores &vector2){
-	//Validar que los dimenciones de los vectores sean iguales.
-	Vectores *vector3 = new Vectores(vector1.getD());
-	for(int i=0; i<vector1.getD(); i++){
+	
+	Vectores *vector3 = new Vectores(vector1.getDim());
+	for(int i=0; i<vector1.getDim(); i++){
 		vector3->v[i]= vector1.v[i] + vector2.v[i];
 	}
+	return *vector3;
+}
+
+Vectores &operator -(const Vectores &vector1, const Vectores &vector2){
+	
+	Vectores *vector3 = new Vectores(vector1.getDim());
+	for(int i=0; i<vector1.getDim(); i++){
+		vector3->v[i]= vector1.v[i] - vector2.v[i];
+	}
+	
 	return *vector3;
 }
