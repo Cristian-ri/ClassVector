@@ -13,6 +13,8 @@ using std::time;
 class Vectores{
 	friend Vectores &operator +(const Vectores &, const Vectores &);
 	friend Vectores &operator -(const Vectores &, const Vectores &);
+	friend Vectores &operator *=(const double &, const Vectores &);
+	friend double   &operator *(const Vectores &, const Vectores &);
 	public:
 		//Constructor
 		Vectores(const int);

@@ -2,8 +2,9 @@
 
 int main() 
 {
+	double x=3, escalar;
 	srand(time(NULL));
-	Vectores v1(3),v2(5), v3(3);
+	Vectores v1(3),v2(3), v3(3);
 	cout<<"v1 = ";
 	v1.mostrarvec();
 	cout<<"v2 = ";
@@ -16,10 +17,22 @@ int main()
 	else{
 		cout<<"V1 no es compatible con v2"<<endl;
 	}
-	/*cout<<"Resta"<<endl;
-	v3 = v1 - v2;
-	v3.mostrarvec();*/
 	
+	cout<<"\n";
+	cout<<"Resta"<<endl;
+	v3 = v1 - v2;
+	v3.mostrarvec();
+	cout<<"\n";
+	cout<<"Producto por un escalar"<<endl;
+	v3= x*=v1;
+	cout<<x<<" * ";
+	v1.mostrarvec();
+	cout<<" = ";
+	v3.mostrarvec();
+	cout<<"\n";
+	cout<<"Producto punto de dos vectortes"<<endl;
+	escalar = v1 * v2;
+	cout<<escalar<<endl;
 		
 	return 0;
 }

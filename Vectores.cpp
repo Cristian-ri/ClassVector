@@ -50,3 +50,25 @@ Vectores &operator -(const Vectores &vector1, const Vectores &vector2){
 	
 	return *vector3;
 }
+
+//Producto vector por un escalar
+Vectores &operator *=(const double &escalar, const Vectores &vector1){
+	
+	Vectores *vector3 = new Vectores(vector1.getDim());
+	for(int i=0; i<vector1.getDim(); i++){
+		vector3->v[i]= escalar * vector1.v[i];
+	}
+	
+	return *vector3;
+}
+
+//Producto de dos vectores
+double &operator *(const Vectores &vector1, const Vectores &vector2){
+	double sumavect=0;
+	double *ptrz = &sumavect;
+	for(int i=0; i<vector1.getDim(); i++){
+		*ptrz += vector1.v[i] * vector2.v[i];
+	}
+	
+	return *ptrz;	
+}
