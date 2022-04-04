@@ -33,6 +33,9 @@ int main()
 	cout<<"Producto punto de dos vectortes"<<endl;
 	escalar = v1 * v2;
 	cout<<escalar<<endl;
-		
+
+	v1.busqueda(5);
+	
+	
 	return 0;
 }

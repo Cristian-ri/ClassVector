@@ -4,7 +4,7 @@ Vectores::Vectores(const int D){
 	this->dim = D;
 	v= new int[dim];
 	for(int i=0; i<this->dim; i++){
-		this->v[i] = 0 + rand()%100;
+		this->v[i] = 0 + rand()%11;
 	}	
 }
 
@@ -71,4 +71,25 @@ double &operator *(const Vectores &vector1, const Vectores &vector2){
 	}
 	
 	return *ptrz;	
+}
+
+void Vectores::busqueda(int clave){
+	char bandera = 'F';
+	int i;
+	int d=clave;
+	Vectores vector1(3);
+	while((bandera=='F') && i<vector1.getDim()){
+		if(vector1.v[i]==d){
+			bandera == 'V';
+		}
+		i++;	
+	}
+	
+	if(bandera=='F'){
+		cout<<"\nNo se encuentra en el vector"<<endl;
+	}
+	
+	else if(bandera=='V'){
+		cout<<"\nSe encuentra en el vector"<<endl;
+	}
 }

@@ -21,6 +21,7 @@ class Vectores{
 		Vectores mostrarvec();
 		void setV(const int);
 		void setDim(const int);
+		void busqueda(int clave);
 		const int getV()const;
 		const int getDim()const;
 		//función que permita inserta el elemento en una posición.
