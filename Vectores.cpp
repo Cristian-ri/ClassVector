@@ -73,23 +73,21 @@ double &operator *(const Vectores &vector1, const Vectores &vector2){
 	return *ptrz;	
 }
 
-void Vectores::busqueda(int clave){
+void Vectores::busqueda(const int clave)
+{
 	char bandera = 'F';
-	int i;
 	int d=clave;
-	Vectores vector1(3);
-	while((bandera=='F') && i<vector1.getDim()){
-		if(vector1.v[i]==d){
-			bandera == 'V';
-		}
-		i++;	
-	}
+	Vectores vector1(getDim());
+	for(int i=0; i<vector1.getDim(); i++){
+		bandera = 'F';
+		if(vector1.getDim()==d){
+			bandera = 'V';
+	}	}
 	
-	if(bandera=='F'){
-		cout<<"\nNo se encuentra en el vector"<<endl;
+	if(bandera == 'V'){
+		cout<<"\nSi esta"<<endl;
 	}
-	
-	else if(bandera=='V'){
-		cout<<"\nSe encuentra en el vector"<<endl;
-	}
+	else if(bandera == 'F'){
+		cout<<"\nNo esta"<<endl;
+	}	
 }
