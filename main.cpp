@@ -30,11 +30,11 @@ int main()
 	cout<<" = ";
 	v3.mostrarvec();
 	cout<<"\n";
-	cout<<"Producto punto de dos vectortes"<<endl;
+	cout<<"Producto punto de dos vectores"<<endl;
 	escalar = v1 * v2;
 	cout<<escalar<<endl;
 
-	v1.busqueda(5);
+	v3.busqueda(v1,5);
 	
 	
 	return 0;
