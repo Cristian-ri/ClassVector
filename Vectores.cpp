@@ -32,6 +32,7 @@ Vectores Vectores::mostrarvec(){
 	cout<<"]"<<endl;
 }
 
+//Suma de vectores.
 Vectores &operator +(const Vectores &vector1, const Vectores &vector2){
 	
 	Vectores *vector3 = new Vectores(vector1.getDim());
@@ -40,7 +41,7 @@ Vectores &operator +(const Vectores &vector1, const Vectores &vector2){
 	}
 	return *vector3;
 }
-
+//Resta de vectores.
 Vectores &operator -(const Vectores &vector1, const Vectores &vector2){
 	
 	Vectores *vector3 = new Vectores(vector1.getDim());
@@ -73,6 +74,7 @@ double &operator *(const Vectores &vector1, const Vectores &vector2){
 	return *ptrz;	
 }
 
+//Busqueda de un vector.
 Vectores Vectores::busqueda(const Vectores &vector1, const int &clave)
 {
 	bool bandera = false;
